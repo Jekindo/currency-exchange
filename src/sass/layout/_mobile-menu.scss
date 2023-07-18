@@ -1,0 +1,85 @@
+.mobile-menu {
+  @include for-size(until-laptop) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    // transform: translateX(-100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: getColor('mobile-menu-bg');
+    text-align: center;
+
+    transition: transform getTransition('duration')
+      getTransition('timing-function');
+  }
+}
+
+.mobile-menu--open {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu__list {
+  @extend %list;
+}
+
+.mobile-menu__link {
+  @include font(400, 18px, 1.3);
+
+  position: relative;
+
+  display: block;
+  padding: 15px 0;
+
+  color: inherit;
+  text-transform: uppercase;
+
+  transition: color getTransition('duration') getTransition('timing-function');
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 5px;
+
+    background-color: getColor('accent');
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 750ms ease;
+  }
+}
+
+.mobile-menu__link--current {
+  color: getColor('accent');
+
+  &::after {
+    transform: scaleX(1);
+  }
+}

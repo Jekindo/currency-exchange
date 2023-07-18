@@ -4,51 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Обмін валют Полтава</title>
-    <link rel="icon" type="image/svg" href="./images/icons/logo.svg"/>
+    <link rel="icon" type="image/svg" href="./images/icons/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <header>
+    <!-- HEADER -->
+    <header class="page-header section">
       <div class="container">
-        <!-- logo -->
-        <a href="./" class="logo">
-          <img src="./images/icons/logo.svg" alt="Логотип компанії" />
-          ОБМІН ВАЛЮТ
-          <br />
-          <span>м. Полтава</span>
-        </a>
+        <nav class="site-nav">
+          <!-- logo -->
+          <a href="./" class="logo">
+            <img
+              class="logo__image"
+              src="./images/icons/logo.svg"
+              alt="Логотип компанії"
+            />
+            <div class="logo__text">
+              <span class="logo__label">ОБМІН ВАЛЮТ</span>
+              <span class="logo__city">м. Полтава</span>
+            </div>
+          </a>
 
-        <!-- site nav -->
-        <ul>
-          <li><a href="">курси</a></li>
-          <li><a href="">стежити</a></li>
-          <li><a href="">переваги</a></li>
-          <li><a href="">фото</a></li>
-          <li><a href="">контакти</a></li>
-        </ul>
+          <!-- site nav -->
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--current" href=""
+                >курси</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">стежити</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">переваги</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">фото</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">контакти</a>
+            </li>
+          </ul>
 
-        <!-- subscribe button -->
-        <button>
-          підписатися
-          <svg>
-            <use href="./images/icons/sprite.svg#icon-telegram"></use>
-          </svg>
-        </button>
+          <div class="contacts site-nav__contacts">
+            <!-- subscribe button -->
+            <button class="button" type="button">
+              підписатися
+              <svg class="button__icon" width="25" height="25">
+                <use href="./images/icons/sprite.svg#icon-telegram"></use>
+              </svg>
+            </button>
+            <!-- call us -->
+            <a class="company-phone" href="tel:+380735098779">
+              <svg class="company-phone__icon" width="33" height="33">
+                <use href="./images/icons/sprite.svg#icon-phone"></use>
+              </svg>
+              +38 (073) 509-87-79
+            </a>
+          </div>
 
-        <!-- call us -->
-        <a href="tel:+380735098779">
-          <svg>
-            <use href="./images/icons/sprite.svg#icon-phone"></use>
-          </svg>
-          +38 (073) 509-87-79
-        </a>
+          <!-- Menu Button -->
+          <button
+            class="menu-button"
+            type="button"
+            data-menu-open
+            aria-controls="menu"
+          >
+            <svg
+              class="menu-button__icon"
+              aria-label="Перемикач мобільного меню"
+              width="40"
+              height="30"
+            >
+              <use
+                class="menu-button__icon-menu"
+                href="./images/icons/sprite.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+        </nav>
       </div>
     </header>
 
     <main>
       <!-- HERO -->
-      <section>
+      <section class="hero section">
         <div class="container">
           <!-- section title -->
           <h1>курси валют</h1>
@@ -99,9 +146,9 @@
           <h2>Щоденна інформація про зміну курсу та оптові знижки</h2>
 
           <!-- subscribe button -->
-          <button>
+          <button class="button">
             підпишись на наш "telegram"
-            <svg>
+            <svg class="button__icon" width="25" height="25">
               <use href="./images/icons/sprite.svg#icon-telegram"></use>
             </svg>
           </button>
@@ -225,7 +272,7 @@
           <!-- google map -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.5787176757997!2d34.545228150391466!3d49.59181140000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825f804678475%3A0xdcc7face1d8a6809!2z0LLRg9C70LjRhtGPINCh0L7QsdC-0YDQvdC-0YHRgtGWLCA0Mywg0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAzNjAwMA!5e0!3m2!1suk!2sua!4v1689436344271!5m2!1suk!2sua"
-            width="600"
+            width="320"
             height="450"
             style="border: 0"
             allowfullscreen=""
@@ -234,6 +281,13 @@
           ></iframe>
         </div>
       </section>
+
+      <!-- GO UP BUTTON -->
+      <button aria-label="Кнопка 'піднятися на верх сторінки'">
+        <svg>
+          <use href="./images/icons/sprite.svg#icon-arrow-up"></use>
+        </svg>
+      </button>
     </main>
 
     <!-- FOOTER -->
@@ -241,10 +295,15 @@
       <div class="container">
         <!-- logo -->
         <a href="./" class="logo">
-          <img src="./images/icons/logo.svg" alt="Логотип компанії" />
-          ОБМІН ВАЛЮТ
-          <br />
-          <span>м. Полтава</span>
+          <img
+            class="logo__image"
+            src="./images/icons/logo.svg"
+            alt="Логотип компанії"
+          />
+          <div class="logo__text">
+            <span class="logo__label">ОБМІН ВАЛЮТ</span>
+            <span class="logo__city">м. Полтава</span>
+          </div>
         </a>
 
         <a href="">Політика конфіденсійності</a>
@@ -278,5 +337,63 @@
         <p>Пн-нд с 9.00 до 18.00</p>
       </div>
     </footer>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" data-menu id="menu">
+
+      <!-- Menu Button -->
+      <button class="menu-button" type="button" data-menu-close>
+        <svg
+          class="menu-button__icon"
+          aria-label="Перемикач мобільного меню"
+          width="40"
+          height="30"
+        >
+          <use
+            class="menu-button__icon-menu"
+            href="./images/icons/sprite.svg#icon-close-menu"
+          ></use>
+        </svg>
+      </button>
+
+      <!-- nav -->
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link mobile-menu__link--current" href=""
+            >курси</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">стежити</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">переваги</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">фото</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">контакти</a>
+        </li>
+      </ul>
+
+      <div class="contacts mobile-menu__contacts">
+        <!-- subscribe button -->
+        <button class="button" type="button">
+          підписатися
+          <svg class="button__icon" width="25" height="25">
+            <use href="./images/icons/sprite.svg#icon-telegram"></use>
+          </svg>
+        </button>
+
+        <!-- call us -->
+        <a class="company-phone" href="tel:+380735098779">
+          <svg class="company-phone__icon" width="33" height="33">
+            <use href="./images/icons/sprite.svg#icon-phone"></use>
+          </svg>
+          +38 (073) 509-87-79
+        </a>
+      </div>
+    </div>
   </body>
 </html>

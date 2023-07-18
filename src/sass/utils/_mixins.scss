@@ -1,0 +1,66 @@
+@mixin font($weight, $size, $height: inherit) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin centered-flex($type: flex, $cross-axis: center, $main-axis: center) {
+  display: $type;
+  align-items: $cross-axis;
+  justify-content: $main-axis;
+}
+
+@mixin aligned-flex($type: flex) {
+  display: $type;
+  align-items: center;
+}
+
+@mixin flex-grid($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+@mixin for-size($range) {
+  @if $range == mobile-only {
+    @media screen and (max-width: #{getBreakpoint('tablet') - 1}) {
+      @content;
+    }
+  } @else if $range == tablet-only {
+    @media screen and (min-width: #{getBreakpoint('tablet')}) and (max-width: #{getBreakpoint('laptop') - 1}) {
+      @content;
+    }
+  } @else if $range == laptop-only {
+    @media screen and (min-width: #{getBreakpoint('laptop')}) and (max-width: #{getBreakpoint('desktop') - 1}) {
+      @content;
+    }
+  } @else if $range == mobile-small {
+    @media screen and (max-width: #{getBreakpoint('mobile') - 1}) {
+      @content;
+    }
+  } @else if $range == until-laptop {
+    @media screen and (max-width: #{getBreakpoint('laptop') - 1}) {
+      @content;
+    }
+  } @else if $range == until-desktop {
+    @media screen and (max-width: #{getBreakpoint('desktop') - 1}) {
+      @content;
+    }
+  } @else if $range == mobile {
+    @media screen and (min-width: getBreakpoint('mobile')) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media screen and (min-width: getBreakpoint('tablet')) {
+      @content;
+    }
+  } @else if $range == laptop {
+    @media screen and (min-width: getBreakpoint('laptop')) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media screen and (min-width: getBreakpoint('desktop')) {
+      @content;
+    }
+  }
+}

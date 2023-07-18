@@ -1,0 +1,37 @@
+$colors: (
+  'text-light': #ffffff,
+  'text-dark': #000000,
+  'page-bg': #232323,
+  'light-section-bg': #ffffff,
+  'mobile-menu-bg': #151515,
+  'accent': #ff9900,
+  'transparency-accent': rgba(255, 153, 0, 0.75),
+  'secondary-accent': #ff6712,
+  'telegram': #2196f3,
+  'secondary-text': #b0b0b0,
+  'online': #00b25c,
+  'label': #929292,
+  'button-shadow': rgb(255 145 2 / 0.6),
+);
+
+$gradients: (
+  'card-accent': linear-gradient(209deg, #ffdaa4 0%, #ffa722 100%),
+  'card-accent-reversed': linear-gradient(138deg, #ffdaa4 0%, #ffa722 100%),
+  'card-dark': linear-gradient(211deg, #404040 0%, #656565 100%),
+);
+
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1330px,
+);
+
+$transition: (
+  'duration': 250ms,
+  'timing-function': cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+$grid-gap: 20px;
+$card-border-radius: 20px;
+$card-mobile-border-radius: 10px;

@@ -1,0 +1,42 @@
+.logo {
+  @include aligned-flex(inline-flex);
+  column-gap: 5px;
+
+  background-image: linear-gradient(180deg, #ffffff 15%, #b0b0b0 80%);
+  background-clip: text;
+  color: transparent;
+  @include font(700, 20px, 1.4);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @include for-size(tablet) {
+    font-size: 24px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 28px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__city {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  &__image {
+    width: 70px;
+
+    @include for-size(tablet) {
+      width: 103px;
+    }
+
+    &--big {
+      width: 103px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.company-phone {
+  @include aligned-flex();
+  @include font(700, 26px, inherit);
+
+  column-gap: 10px;
+
+  color: inherit;
+  letter-spacing: 0.05em;
+
+  animation: headShake 3100ms 750ms ease-in-out infinite;
+  transition: color getTransition('duration') getTransition('timing-function');
+
+  &:hover,
+  &:focus {
+    animation-play-state: paused;
+    color: #ffeed9;
+  }
+
+  @include for-size(laptop) {
+    font-size: 22px;
+  }
+}

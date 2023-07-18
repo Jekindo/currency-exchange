@@ -1,0 +1,5 @@
+body {
+  color: getColor('text-light');
+  font-family: 'Familjen Grotesk', sans-serif;
+  @include font(400, 22px, 1.2);
+}
