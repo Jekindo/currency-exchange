@@ -1,0 +1,54 @@
+
+.advertisment__title {
+  @include font(400, 24px, 1.2);
+
+  margin-bottom: 25px;
+
+  color: getColor('text-dark');
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.advertisment__inner {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 100px;
+  }
+}
+
+.advertisment__content {
+  padding: 50px 0;
+
+  @include for-size(tablet) {
+    align-self: center;
+    flex-basis: 50%;
+    text-align: center;
+  }
+}
+
+.advertisment__button {
+  @include for-size(mobile-small) {
+    font-size: 14px !important;
+  }
+
+  @include for-size(mobile-only) {
+    margin-bottom: 50px;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advertisment__image {
+  @include for-size(mobile-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-size(laptop) {
+    width: 300px;
+  }
+
+  width: 180px;
+}

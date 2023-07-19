@@ -1,14 +1,16 @@
 .button {
+  @extend %no-border;
+  @include font(700, 16px, 1.9);
+  @include centered-flex();
+
   position: relative;
   overflow: hidden;
 
-  @include centered-flex();
   column-gap: 10px;
   padding: 13px 25px;
 
-  @extend %no-border;
   border-radius: 30px;
-  box-shadow: 0px 6px 25px get-color('button-shadow');
+  box-shadow: 0px 6px 25px getColor('button-shadow');
 
   cursor: pointer;
   background: linear-gradient(
@@ -18,7 +20,6 @@
   );
   background-size: 400% 400%;
   color: getColor('text-light');
-  @include font(700, 18px, 1.9);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
@@ -40,6 +41,10 @@
   }
 
   @include for-size(mobile) {
-    font-size: 20px;
+    font-size: 18px;
   }
+}
+
+.button__icon {
+  flex-shrink: 0;
 }

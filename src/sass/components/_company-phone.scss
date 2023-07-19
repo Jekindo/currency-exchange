@@ -1,6 +1,14 @@
 .company-phone {
   @include aligned-flex();
-  @include font(700, 26px, inherit);
+  @include font(700, 24px, inherit);
+
+  @include for-size(laptop) {
+    font-size: 22px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 26px;
+  }
 
   column-gap: 10px;
 
@@ -14,9 +22,5 @@
   &:focus {
     animation-play-state: paused;
     color: #ffeed9;
-  }
-
-  @include for-size(laptop) {
-    font-size: 22px;
   }
 }

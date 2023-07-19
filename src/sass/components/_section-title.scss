@@ -1,0 +1,71 @@
+.section-title {
+  @include font(700, 28px, 1.2);
+
+  @include for-size(mobile) {
+    font-size: 36px;
+  }
+
+  @include for-size(tablet) {
+    display: inline-block;
+    font-size: 40px;
+  }
+
+  @include for-size(laptop) {
+    font-size: 50px;
+  }
+
+  position: relative;
+  z-index: 2;
+
+  padding: 20px 35px;
+
+  color: getColor('text-light');
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before,
+  &::after,
+  &__frame::before,
+  &__frame::after {
+    content: '';
+
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    border-top: 3px solid getColor('accent');
+    border-left: 3px solid getColor('accent');
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+
+    border-top: 3px solid getColor('accent');
+    border-right: 3px solid getColor('accent');
+  }
+}
+
+.section-title__frame {
+  &::before {
+    bottom: 0;
+    left: 0;
+
+    border-bottom: 3px solid getColor('accent');
+    border-left: 3px solid getColor('accent');
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+
+    border-bottom: 3px solid getColor('accent');
+    border-right: 3px solid getColor('accent');
+  }
+}

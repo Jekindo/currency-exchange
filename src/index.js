@@ -1,8 +1,8 @@
-const refs = {
-  openMenuBtn: document.querySelector('[data-menu-open]'),
-  closeMenuBtn: document.querySelector('[data-menu-close]'),
-  mobileMenu: document.querySelector('[data-menu]'),
-};
+import getRefs from './js/refecences/get-refs';
+
+import './js/tabs'
+
+const refs = getRefs();
 
 refs.openMenuBtn.addEventListener('click', openMobileMenu);
 refs.closeMenuBtn.addEventListener('click', closeMobileMenu);

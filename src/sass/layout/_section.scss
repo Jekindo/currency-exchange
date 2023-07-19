@@ -1,0 +1,5 @@
+section {
+  &:nth-child(even) {
+    background-color: getColor('light-section-bg');
+  }
+}
