@@ -1,0 +1,43 @@
+.collapse {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.collapse-link {
+  @include font(400, 18px, 1.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  background-color: #200909;
+  text-transform: uppercase;
+
+  transition: color getTransition('duration') getTransition('timing-function'),
+    background-color getTransition('duration');
+}
+
+.collapse-link--active {
+  color: inherit;
+
+  background-color: getColor('accent');
+}
+
+.collapse-link--inactive {
+  color: getColor('secondary-text');
+}
+
+.collapse-link__icon {
+  transform: rotate(90deg);
+
+  transition: transform getTransition('duration')
+    getTransition('timing-function');
+
+  .collapse-link--active & {
+    transform: rotate(-90deg);
+  }
+}

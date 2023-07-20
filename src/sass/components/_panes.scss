@@ -1,0 +1,43 @@
+.pane {
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.pane__list {
+  @extend %list;
+  @include font(400, 16px, 1.4);
+
+  padding: 20px;
+
+  background-color: #333333;
+}
+
+.pane__item {
+  position: relative;
+  padding-left: 50px;
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url('../images/icons/icon-time.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transform: translateY(-50%);
+  }
+}
+ 
