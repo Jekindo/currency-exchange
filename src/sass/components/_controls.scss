@@ -1,3 +1,9 @@
 .controls {
-    @extend %list;
+
+    
+  @extend %list;
+
+  @include for-size(mobile-only) {
+    display: none;
   }
+}

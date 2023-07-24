@@ -1,0 +1,5 @@
+.features-list {
+    @include for-size(mobile-only) {
+        display: none;
+    }
+}

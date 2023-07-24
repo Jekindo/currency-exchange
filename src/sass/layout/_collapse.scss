@@ -1,9 +1,9 @@
 .collapse {
-    display: none;
+  display: none;
 
-    &--active {
-        display: block;
-    }
+  &--active {
+    display: block;
+  }
 }
 
 .collapse-link {
@@ -32,12 +32,15 @@
 }
 
 .collapse-link__icon {
+  fill: currentColor;
+
   transform: rotate(90deg);
 
   transition: transform getTransition('duration')
     getTransition('timing-function');
 
   .collapse-link--active & {
+    opacity: 1;
     transform: rotate(-90deg);
   }
 }

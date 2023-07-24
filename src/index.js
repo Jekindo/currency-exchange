@@ -1,6 +1,8 @@
 import getRefs from './js/refecences/get-refs';
 
 import './js/tabs'
+import './js/vendors/swiper'
+import './js/components/back-top-top-btn'
 
 const refs = getRefs();
 

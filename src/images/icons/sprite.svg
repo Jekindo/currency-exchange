@@ -22,5 +22,13 @@
 <symbol id="icon-arrow-up" viewBox="0 0 32 32">
 <path d="M16 1l-15 15h9v16h12v-16h9z"></path>
 </symbol>
+<symbol id="icon-arrow" viewBox="0 0 20 32">
+<path d="M4.62 29.706l-2.747-2.718 11.254-11.136-11.254-11.136 2.747-2.718 13.883 13.854-13.883 13.854z"></path>
+</symbol>
+<symbol id="icon-half-arrow-up" viewBox="0 0 15 10">
+<path d="M5 2.12134L7.12132 1.75834e-05L14.1924 7.07109L12.0711 9.19241L5 2.12134Z"/>
+<rect x="7.07031" width="3" height="10" transform="rotate(45 7.07031 0)"/>
+</symbol>
+
 </defs>
 </svg>

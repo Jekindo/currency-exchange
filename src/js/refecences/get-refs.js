@@ -4,6 +4,8 @@ export default function getRefs() {
     closeMenuBtn: document.querySelector('[data-menu-close]'),
     mobileMenu: document.querySelector('[data-menu]'),
 
-    panes: document.querySelector('[data-panes]')
+    panes: document.querySelector('[data-panes]'),
+
+    backToTopButton: document.querySelector('button[data-action="back-top-top"]')
   };
 }
