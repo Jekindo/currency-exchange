@@ -1,0 +1,167 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  text-align: center;
+
+  &__button {
+    @include for-size(mobile-only) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.page-footer__row {
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer__column {
+  &:nth-child(2) {
+    @include for-size(laptop) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: getBreakpoint('tablet')) and (max-width: calc(getBreakpoint('desktop') - 1px)) {
+    margin-bottom: 50px;
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @include for-size(desktop) {
+    justify-content: space-between;
+    column-gap: 80px;
+  }
+}
+
+.page-footer__logo {
+  @include for-size(mobile-only) {
+    margin-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.page-footer__list {
+  @extend %list;
+
+  @include for-size(mobile-only) {
+    margin-bottom: 40px;
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  @include for-size(desktop) {
+    max-width: 250px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+}
+
+.page-footer__item {
+  @include for-size(desktop) {
+    flex-basis: calc((100% - 1 * 20px) / 2);
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: calc(getBreakpoint('tablet') - 1px)),
+      (min-width: getBreakpoint('desktop')) {
+      margin-bottom: 10px;
+    }
+
+    @include for-size(tablet) {
+      margin-right: 10px;
+    }
+
+    @include for-size(laptop) {
+      margin-right: 20px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-footer__link {
+  @include font(400, 18px, 1.2);
+
+  display: block;
+  padding: 5px;
+
+  color: getColor('text-light');
+  text-align: center;
+
+  transition: color getTransition('duration') getTransition('timing-function');
+
+  @include for-size(laptop) {
+    font-size: 20px;
+  }
+
+  @include for-size(desktop) {
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('label');
+  }
+}
+
+// .page-footer__contact-info {
+//   @media screen and (min-width: getBreakpoint('tablet')) and (max-width: calc(getBreakpoint('desktop') - 1px)) {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
+
+.page-footer__company-phone {
+  margin-bottom: 30px;
+
+  @include for-size(tablet) {
+    margin-bottom: 5px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__schedule {
+  @media screen and (max-width: calc(getBreakpoint('tablet') - 1px)),
+    (min-width: getBreakpoint('desktop')) {
+    margin-bottom: 30px;
+  }
+}
+
+.page-footer__logo-wrapper {
+  @include for-size('laptop') {
+    text-align: left;
+  }
+}
+
+.page-footer--small {
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.page-footer--large {
+  @include for-size(until-desktop) {
+    display: none;
+  }
+}

@@ -1,4 +1,22 @@
 .hero {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  min-height: 100vh;
+
+  background-image: linear-gradient(90deg, #151515 0%, rgba(0, 0, 0, 0) 18.99%),
+    linear-gradient(270deg, #151515 0%, rgba(0, 0, 0, 0) 17.36%),
+    linear-gradient(0deg, rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.8)),
+    image-set(
+      url('../images/hero-bg.jpg') 1x,
+      url('../images/hero-bg@2x.jpg') 2x
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include for-size(desktop) {
     padding-top: 180px;
     padding-bottom: 300px;
+      
+  }
 }

@@ -1,8 +1,18 @@
 @import '~node_modules/swiper/swiper.css';
+@import '~node_modules/swiper/swiper-bundle.css';
 
 .swiper {
   width: 100%;
+
+  @include for-size(tablet) {
+    display: none;
+  }
 }
 
-.swiper-slide {
+.swiper-slide__feature-card {
+  min-height: 180px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: getColor('secondary-accent');
 }

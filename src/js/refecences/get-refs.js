@@ -5,7 +5,11 @@ export default function getRefs() {
     mobileMenu: document.querySelector('[data-menu]'),
 
     panes: document.querySelector('[data-panes]'),
+    panesImage: document.querySelector('[data-panes-image]'),
+    controls: document.querySelector('[data-controls]'),
 
-    backToTopButton: document.querySelector('button[data-action="back-top-top"]')
+    backToTopButton: document.querySelector(
+      'button[data-action="back-top-top"]'
+    ),
   };
 }

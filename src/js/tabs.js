@@ -2,38 +2,64 @@ import getRefs from './refecences/get-refs';
 
 const refs = getRefs();
 
-refs.panes.addEventListener('click', onCollapseLinkClick);
+refs.controls.addEventListener('click', onControlsClick);
 
-function onCollapseLinkClick(evt) {
+function onControlsClick(evt) {
   evt.preventDefault();
 
-  if (
-    evt.target.nodeName !== 'A' &&
-    !evt.target.classList.contains('collapse-link__icon')
-  ) {
+  if (evt.target.nodeName !== 'A') {
     return;
   }
 
-  const currentActiveCollapseLink = refs.panes.querySelector(
-    '.collapse-link--active'
+  const currentActiveControlLink = refs.controls.querySelector(
+    '.controls__link--active'
   );
 
-  if (currentActiveCollapseLink && currentActiveCollapseLink !== evt.target) {
-    currentActiveCollapseLink.classList.remove('collapse-link--active');
-    currentActiveCollapseLink.classList.add('collapse-link--inactive');
+  if (currentActiveControlLink) {
+    const currentActivePane = refs.panes.querySelector('.pane--active');
 
-    const collapseId = currentActiveCollapseLink.getAttribute('href').slice(1);
-    const collapse = refs.panes.querySelector(`#${collapseId}`);
-
-    collapse.classList.remove('collapse--active');
+    currentActiveControlLink.classList.remove('controls__link--active');
+    currentActivePane.classList.remove('pane--active');
   }
 
-  const collapseLink = evt.target;
-  collapseLink.classList.toggle('collapse-link--inactive');
-  collapseLink.classList.toggle('collapse-link--active');
+  const controlLink = evt.target;
+  controlLink.classList.add('controls__link--active');
 
-  const collapseId = collapseLink.getAttribute('href').slice(1);
-  const collapse = refs.panes.querySelector(`#${collapseId}`);
+  const paneId = controlLink.getAttribute('href').slice(1);
+  refs.panes.querySelector(`#${paneId}`).classList.add('pane--active');
 
-  collapse.classList.toggle('collapse--active');
+  let imageUrl = null;
+  let imageUrl2x = null;
+
+  switch (paneId) {
+    case 'citizens':
+      imageUrl = new URL(`../images/citizens.jpg`, import.meta.url);
+      imageUrl2x = new URL(`../images/citizens@2x.jpg`, import.meta.url);
+
+      refs.panesImage.src = imageUrl;
+      refs.panesImage.srcset = `${imageUrl} 1x, ${imageUrl2x} 2x`;
+      refs.panesImage.alt = 'Щасливий чоловік з доларами в руках';
+
+      break;
+
+    case 'guests':
+      imageUrl = new URL(`../images/guests.jpg`, import.meta.url);
+      imageUrl2x = new URL(`../images/guests@2x.jpg`, import.meta.url);
+
+      refs.panesImage.src = imageUrl;
+      refs.panesImage.srcset = `${imageUrl} 1x, ${imageUrl2x} 2x`;
+      refs.panesImage.alt = 'Щасливий чоловік з доларами в руках';
+
+      break;
+
+    case 'businessmen':
+      imageUrl = new URL(`../images/businessmen.jpg`, import.meta.url);
+      imageUrl2x = new URL(`../images/businessmen@2x.jpg`, import.meta.url);
+
+      refs.panesImage.src = imageUrl;
+      refs.panesImage.srcset = `${imageUrl} 1x, ${imageUrl2x} 2x`;
+      refs.panesImage.alt = 'Щасливий чоловік з доларами в руках';
+
+      break;
+  }
 }

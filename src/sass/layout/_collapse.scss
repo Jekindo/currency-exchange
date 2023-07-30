@@ -1,5 +1,18 @@
 .collapse {
   display: none;
+  z-index: -1;
+
+  animation: fadeEffect 250ms;
+
+  @include for-size(tablet) {
+    display: block;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &--active {
     display: block;

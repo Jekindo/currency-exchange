@@ -1,6 +1,26 @@
+.panes {
+  overflow: hidden;
+
+  @include for-size(mobile-only) {
+    border-radius: 20px;
+  }
+}
+
 .pane {
+  animation: fadeEffect 500ms;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
   &:not(:last-child) {
-    margin-bottom: 3px;
+    @include for-size(mobile-only) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &--active {
+    display: block;
   }
 }
 
@@ -10,7 +30,13 @@
 
   padding: 20px;
 
-  background-color: #333333;
+  @include for-size(mobile-only) {
+    background-color: #333333;
+  }
+
+  @include for-size(desktop) {
+    flex-basis: 800px;
+  }
 }
 
 .pane__item {
@@ -19,6 +45,19 @@
 
   &:not(:last-child) {
     margin-bottom: 35px;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url('../images/icons/icon-time.svg');
+  }
+  &:nth-child(2)::before {
+    background-image: url('../images/icons/shield.svg');
+  }
+  &:nth-child(3)::before {
+    background-image: url('../images/icons/call-phone.svg');
+  }
+  &:nth-child(4)::before {
+    background-image: url('../images/icons/discount.svg');
   }
 
   &::before {
@@ -32,7 +71,6 @@
     width: 30px;
     height: 30px;
 
-    background-image: url('../images/icons/icon-time.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -40,4 +78,9 @@
     transform: translateY(-50%);
   }
 }
- 
+
+.card-header {
+  @include for-size(tablet) {
+    display: none;
+  }
+}

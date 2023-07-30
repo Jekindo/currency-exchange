@@ -1,0 +1,10 @@
+.telegram-link {
+  color: getColor('telegram');
+
+  transition: color getTransition('duration') getTransition('timing-function');
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}

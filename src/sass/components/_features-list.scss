@@ -1,4 +1,11 @@
 .features-list {
+    @extend %list;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    
     @include for-size(mobile-only) {
         display: none;
     }

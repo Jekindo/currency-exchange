@@ -1,5 +1,5 @@
 .menu-button {
-  @include for-size(laptop) {
+  @include for-size(tablet) {
     display: none;
   }
 

@@ -3,3 +3,133 @@ section {
     background-color: getColor('light-section-bg');
   }
 }
+
+.section {
+  // &--clouds-bg {
+  // padding-top: 80px;
+  // padding-bottom: 100px;
+
+  // @include for-size(desktop) {
+  //   padding-top: 150px;
+  //   padding-bottom: 159px;
+  // }
+
+  //   // Top Cloud
+  //   &::before {
+  //     top: -1%;
+  //     left: 0;
+
+  //     background-image: image-set(
+  //       url(../images/common/clouds-top-mobile.png) 1x,
+  //       url(../images/common/clouds-top-mobile@2x.png) 2x
+  //     );
+
+  //     @include for-size(tablet) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-top-tablet.png) 1x,
+  //         url(../images/common/clouds-top-desktop.png) 2x
+  //       );
+  //     }
+  //     @include for-size(laptop) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-top-desktop.png) 1x,
+  //         url(../images/common/clouds-top-desktop@2x.png) 2x
+  //       );
+  //     }
+  //   }
+
+  //   // Bottom Cloud
+
+  //   &::after {
+  //     bottom: -1%;
+  //     left: 0;
+
+  //     background-image: image-set(
+  //       url(../images/common/clouds-bottom-mobile.png) 1x,
+  //       url(../images/common/clouds-bottom-mobile@2x.png) 2x
+  //     );
+
+  //     @include for-size(tablet) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-bottom-tablet.png) 1x,
+  //         url(../images/common/clouds-bottom-desktop.png) 2x
+  //       );
+  //     }
+  //     @include for-size(laptop) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-bottom-desktop.png) 1x,
+  //         url(../images/common/clouds-bottom-desktop@2x.png) 2x
+  //       );
+  //     }
+  //   }
+  // }
+
+  // &--clouds-top-bg {
+  //   &::before {
+  //     top: 0;
+  //     left: 0;
+
+  //     background-image: image-set(
+  //       url(../images/common/clouds-top-mobile.png) 1x,
+  //       url(../images/common/clouds-top-mobile@2x.png) 2x
+  //     );
+
+  //     @include for-size(tablet) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-top-tablet.png) 1x,
+  //         url(../images/common/clouds-top-desktop.png) 2x
+  //       );
+  //     }
+
+  //     @include for-size(laptop) {
+  //       background-image: image-set(
+  //         url(../images/common/clouds-top-desktop.png) 1x,
+  //         url(../images/common/clouds-top-desktop@2x.png) 2x
+  //       );
+  //     }
+  //   }
+  // }
+
+  &--clouds-bg {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    background-image: image-set(
+        url('../images/clouds-top-mobile.png') 1x,
+        url('../images/clouds-top-mobile@2x.png') 2x
+      ),
+      image-set(
+        url('../images/clouds-bottom-mobile.png') 1x,
+        url('../images/clouds-bottom-mobile@2x.png') 2x
+      ),
+      image-set(
+        url('../images/firewood.png') 1x,
+        url('../images/firewood@2x.png') 2x
+      );
+
+    background-size: 100% auto, 100% auto, 40% auto;
+    background-repeat: no-repeat;
+
+    background-position: top -1.5vw center, bottom -1.5vw center, bottom 1% right;
+
+    @include for-size(tablet) {
+      background-image: image-set(
+          url('../images/clouds-top-desktop.png') 1x,
+          url('../images/clouds-top-desktop@2x.png') 2x
+        ),
+        image-set(
+          url('../images/clouds-bottom-desktop.png') 1x,
+          url('../images/clouds-bottom-desktop@2x.png') 2x
+        ),
+        image-set(
+          url('../images/firewood.png') 1x,
+          url('../images/firewood@2x.png') 2x
+        );
+    }
+
+    @include for-size(desktop) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+  }
+}

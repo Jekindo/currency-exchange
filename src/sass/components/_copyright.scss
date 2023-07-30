@@ -1,0 +1,19 @@
+.copyright {
+  @include font(400, 16px, 1.6);
+
+  margin-bottom: 0;
+
+  color: getColor('label');
+
+  &--under-logo {
+    @include for-size(until-laptop) {
+      display: none;
+    }
+  }
+
+  &--temporary {
+    @include for-size(laptop) {
+      display: none;
+    }
+  }
+}

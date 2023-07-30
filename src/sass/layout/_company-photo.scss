@@ -1,0 +1,25 @@
+.company-photo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-image: url(../images/smoke-left.png),
+    url(../images/smoke-right.png);
+  background-repeat: no-repeat;
+  background-size: auto 50vw;
+  background-position: top -50px left, bottom -50px right;
+  
+  @include for-size(laptop) {
+      
+      background-size: auto 25vw;
+  }
+  
+  &__thumb {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__image {
+  }
+}

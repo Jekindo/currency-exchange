@@ -1,14 +1,6 @@
 .company-phone {
-  @include aligned-flex();
+  @include centered-flex();
   @include font(700, 24px, inherit);
-
-  @include for-size(laptop) {
-    font-size: 22px;
-  }
-
-  @include for-size(desktop) {
-    font-size: 26px;
-  }
 
   column-gap: 10px;
 
@@ -17,6 +9,18 @@
 
   animation: headShake 3100ms 750ms ease-in-out infinite;
   transition: color getTransition('duration') getTransition('timing-function');
+
+  @include for-size(tablet) {
+    font-size: 16px;
+  }
+
+  @include for-size(laptop) {
+    font-size: 22px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 26px;
+  }
 
   &:hover,
   &:focus {

@@ -1,16 +1,47 @@
 .advantages {
-  padding-top: 80px;
-  padding-bottom: 150px;
-
   &__title-wrapper {
     margin-bottom: 30px;
   }
 
-  &__subtitle {
-    margin-bottom: 50px;
+  &__tabs {
+    margin-bottom: 70px;
   }
 
-  &__tabs {
-    margin-bottom: 100px;
+  &__controls {
+    margin-bottom: 50px;
+  }
+}
+
+.advantages__subtitle {
+  position: relative;
+  z-index: 3;
+
+
+  margin-bottom: 50px;
+
+  &::before {
+    @include for-size(desktop) {
+      content: '';
+      
+      position: absolute;
+      top: -210%;
+      left: -38%;
+      // top: -200%;
+      // left: -55%;
+      z-index: -1;
+
+      display: inline-block;
+      width: 40%;
+      height: 70vh;
+
+      opacity: 0.6;
+      background-image: image-set(
+        url('../images/sparks-expload.png') 1x,
+        url('../images/sparks-expload@2x.png') 2x
+      );
+      background-size: contain;
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
   }
 }

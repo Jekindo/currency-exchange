@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,32 +35,37 @@
           <!-- site nav -->
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--current" href=""
-                >курси</a
-              >
+              <a class="site-nav__link site-nav__link--current" href="#hero">
+                курси
+              </a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">стежити</a>
+              <a class="site-nav__link" href="#advertisment">стежити</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">переваги</a>
+              <a class="site-nav__link" href="#advantages">переваги</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">фото</a>
+              <a class="site-nav__link" href="#company-photo">фото</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">контакти</a>
+              <a class="site-nav__link" href="#map">контакти</a>
             </li>
           </ul>
 
-          <div class="contacts site-nav__contacts">
+          <div class="contacts">
             <!-- subscribe button -->
-            <button class="button" type="button">
+            <a
+              href="https://t.me/currencyexchangePoltava"
+              target="_blank"
+              class="button"
+              type="button"
+            >
               підписатися
               <svg class="button__icon" width="25" height="25">
                 <use href="./images/icons/sprite.svg#icon-telegram"></use>
               </svg>
-            </button>
+            </a>
 
             <!-- call us -->
             <a class="company-phone" href="tel:+380735098779">
@@ -96,67 +101,86 @@
 
     <main>
       <!--! HERO -->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container">
           <!-- section title -->
           <h1 class="section-title hero__section-title">
-            <span class="section-title__frame"> курси валют </span>
+            <span class="section-title__frame">
+              курси <span class="excerpt excerpt--accent">валют</span>
+            </span>
           </h1>
           <p>
             Оптові знижки в
-            <a href="https://t.me/currencyexchangePoltava">Telegram</a>
+            <a
+              class="telegram-link"
+              href="https://t.me/currencyexchangePoltava"
+              target="_blank"
+              >Telegram</a
+            >
           </p>
           <p>* курси валют можуть змінюватись на протязі дня</p>
 
           <!-- currencies rate table -->
-          <!-- <table>
-            <thead>
+          <table class="currencies-table">
+            <thead class="currencies-table__head">
               <tr>
-                <th>Валюта</th>
-                <th>Купівля</th>
-                <th>Продаж</th>
-                <th>10 липня | 10:23</th>
+                <th class="currencies-table__header">Валюта</th>
+                <th class="currencies-table__header">Купівля</th>
+                <th class="currencies-table__header">Продаж</th>
+                <th class="currencies-table__header">10 липня | 10:23</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Курс USD/UAH</td>
-                <td>37.00</td>
-                <td>37.50</td>
+              <tr class="currencies-table__row currencies-table__block">
+                <td class="currencies-table__currency-name">
+                  <span class="excerpt excerpt--accent">Курс USD/UAH</span>
+                </td>
+                <td class="currencies-table__currency-rate">37.00</td>
+                <td class="currencies-table__currency-rate">37.50</td>
                 <td></td>
               </tr>
-              <tr>
-                <td>Курс EUR/UAH</td>
-                <td>40.80</td>
-                <td>41.00</td>
+              <tr class="currencies-table__row currencies-table__block">
+                <td class="currencies-table__currency-name">
+                  <span class="excerpt excerpt--accent">Курс EUR/UAH</span>
+                </td>
+                <td class="currencies-table__currency-rate">40.80</td>
+                <td class="currencies-table__currency-rate">41.00</td>
                 <td></td>
               </tr>
-              <tr>
-                <td>Курс PLN/UAH</td>
-                <td>8.85</td>
-                <td>9.10</td>
+              <tr class="currencies-table__row currencies-table__block">
+                <td class="currencies-table__currency-name">
+                  <span class="excerpt excerpt--accent">Курс PLN/UAH</span>
+                </td>
+                <td class="currencies-table__currency-rate">8.85</td>
+                <td class="currencies-table__currency-rate">9.10</td>
                 <td></td>
               </tr>
             </tbody>
-          </table> -->
+          </table>
         </div>
       </section>
 
       <!--! TELEGRAM ADVERTISMENT -->
-      <section class="advertisment">
+      <section class="advertisment" id="advertisment">
         <div class="container advertisment__inner">
           <div class="advertisment__content">
             <!-- section title -->
             <h2 class="advertisment__title">
-              Щоденна інформація про зміну курсу та оптові знижки
+              Щоденна інформація про зміну
+              <span class="excerpt excerpt--accent">курсу</span> та
+              <span class="excerpt excerpt--accent">оптові знижки</span>
             </h2>
             <!-- subscribe button -->
-            <button class="button advertisment__button">
+            <a
+              class="button advertisment__button"
+              href="https://t.me/currencyexchangePoltava"
+              target="_blank"
+            >
               підпишись на наш "telegram"
               <svg class="button__icon" width="25" height="25">
                 <use href="./images/icons/sprite.svg#icon-telegram"></use>
               </svg>
-            </button>
+            </a>
           </div>
 
           <!-- subscribe image -->
@@ -169,154 +193,160 @@
       </section>
 
       <!--! OUR ADVANTAGES-->
-      <section class="advantages">
+      <section class="advantages section section--clouds-bg" id="advantages">
         <div class="container">
           <!-- section title -->
           <div class="title-wrapper advantages__title-wrapper">
             <h2 class="section-title">
-              <span class="section-title__frame"> наші переваги </span>
+              <span class="section-title__frame">
+                наші <span class="excerpt excerpt--accent">переваги</span>
+              </span>
             </h2>
           </div>
 
           <p class="advantages__subtitle">
             Пункт «Обмін Валют» пропонує свої послуги з обміну іноземної валюти
-            і працює з такими видами: USA-долар, EUR- Євро, PL — Польська злота.
+            і працює з такими видами: <br />
+            <span class="excerpt excerpt--secondary-accent">USA - долар</span>,
+            <span class="excerpt excerpt--secondary-accent">EUR - Євро</span>,
+            <span class="excerpt excerpt--secondary-accent">PL - Польська злота</span> .
           </p>
 
           <!-- tabs -->
           <div class="tabs advantages__tabs" id="tabs-1">
-            <ul class="controls" data-controls>
-              <li class="controls__item">
-                <a
-                  class="controls__link controls__link--inactive"
-                  href="#citizens"
-                >
-                  громадянам
-                  <span class="controls__icon-extend">></span>
-                </a>
-              </li>
-              <li class="controls__item">
-                <a
-                  class="controls__link controls__link--active controls__link--open"
-                  href="#guests"
-                >
-                  гостям міста
-                  <span class="controls__icon-extend">></span>
-                </a>
-              </li>
-              <li class="controls__item">
-                <a
-                  class="controls__link controls__link--inactive"
-                  href="#businessmen"
-                >
-                  бізнесменам
-                  <span class="controls__icon-extend">></span>
-                </a>
-              </li>
-            </ul>
-
-            <div class="panes" data-panes>
-              <div class="pane" id="citizens">
-                <div class="card-header">
+            <div class="tabs__content">
+              <ul class="controls advantages__controls" data-controls>
+                <li class="controls__item">
                   <a
-                    class="collapse-link collapse-link--inactive"
-                    href="#collapse-0"
+                    class="controls__link controls__link--active"
+                    href="#citizens"
                   >
                     громадянам
-                    <svg class="collapse-link__icon" width="15" height="15">
-                      <use href="./images/icons/sprite.svg#icon-arrow"></use>
-                    </svg>
                   </a>
-                </div>
-                <div class="collapse" id="collapse-0">
-                  <ul class="pane__list">
-                    <li class="pane__item">
-                      Співпраця з нами не передбачає необхідність вистоювання
-                      довгих черг.
-                    </li>
-                    <li class="pane__item">
-                      Крім того ми пропонуємо найкращий курс обміну валют, який
-                      тільки може бути в Полтаві.
-                    </li>
-                    <li class="pane__item">
-                      Забронювати можна за телефоном або в нашому додатку
-                      телеграм.
-                    </li>
-                    <li class="pane__item">
-                      Приймаємо старі купюри, комісія залежить від характеру і
-                      сили пошкодження купюри. Клієнт залишає за собою право
-                      відмовитися від угоди.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="pane" id="guests">
-                <div class="card-header">
-                  <a
-                    class="collapse-link collapse-link--inactive"
-                    href="#collapse-1"
-                  >
-                    гостям міста
-                    <svg class="collapse-link__icon" width="15" height="15">
-                      <use href="./images/icons/sprite.svg#icon-arrow"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="collapse" id="collapse-1">
-                  <ul class="pane__list">
-                    <li class="pane__item">
-                      Для тих, хто відвідує славну Полтаву, ми забезпечуємо
-                      комфортні умови обслуговування.
-                    </li>
-                    <li class="pane__item">
-                      Зручне місце розташування відділень компанії, а також
-                      найкращий курс обміну валют, який тільки може бути в
-                      Полтаві.
-                    </li>
-                    <li class="pane__item">
-                      Перевіряємо купюри на справжність.
-                    </li>
-                    <li class="pane__item">
-                      Фіксація курсу проводиться за телефоном або в нашому
-                      додатку телеграм
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="pane" id="businessmen">
-                <div class="card-header">
-                  <a
-                    class="collapse-link collapse-link--inactive"
-                    href="#collapse-2"
-                  >
+                </li>
+                <li class="controls__item">
+                  <a class="controls__link" href="#guests"> гостям міста </a>
+                </li>
+                <li class="controls__item">
+                  <a class="controls__link" href="#businessmen">
                     бізнесменам
-                    <svg class="collapse-link__icon" width="15" height="15">
-                      <use href="./images/icons/sprite.svg#icon-arrow"></use>
-                    </svg>
                   </a>
+                </li>
+              </ul>
+
+              <div class="panes" data-panes>
+                <div class="pane pane--active" id="citizens">
+                  <div class="card-header">
+                    <a
+                      class="collapse-link collapse-link--inactive"
+                      href="#collapse-0"
+                    >
+                      громадянам
+                      <svg class="collapse-link__icon" width="15" height="15">
+                        <use href="./images/icons/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="collapse" id="collapse-0">
+                    <ul class="pane__list">
+                      <li class="pane__item">
+                        Співпраця з нами не передбачає необхідність вистоювання
+                        довгих черг.
+                      </li>
+                      <li class="pane__item">
+                        Крім того ми пропонуємо найкращий курс обміну валют,
+                        який тільки може бути в Полтава.
+                      </li>
+                      <li class="pane__item">
+                        Забронювати можна за телефоном або в нашому додатку
+                        телеграм.
+                      </li>
+                      <li class="pane__item">
+                        Приймаємо старі купюри, комісія залежить від характеру і
+                        сили пошкодження купюри. Клієнт залишає за собою право
+                        відмовитися від угоди.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="collapse" id="collapse-2">
-                  <ul class="pane__list">
-                    <li class="pane__item">
-                      Люди бізнесу в Полтаві можуть розраховувати на вигідні
-                      умови з обміну валюти.
-                    </li>
-                    <li class="pane__item">
-                      На фіксацію курсу в будь-якому зручному для них режимі, а
-                      також можливість замовити заздалегідь визначену суму.
-                    </li>
-                    <li class="pane__item">
-                      Для постійних клієнтів створені спеціальні умови обміну.
-                    </li>
-                    <li class="pane__item">
-                      Високий рівень безпеки при обміні. Для Вас працює команда
-                      професіоналів.
-                    </li>
-                  </ul>
+
+                <div class="pane" id="guests">
+                  <div class="card-header">
+                    <a
+                      class="collapse-link collapse-link--inactive"
+                      href="#collapse-1"
+                    >
+                      гостям міста
+                      <svg class="collapse-link__icon" width="15" height="15">
+                        <use href="./images/icons/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="collapse" id="collapse-1">
+                    <ul class="pane__list">
+                      <li class="pane__item">
+                        Для тих, хто відвідує славну Полтава, ми забезпечуємо
+                        комфортні умови обслуговування.
+                      </li>
+                      <li class="pane__item">
+                        Зручне місце розташування відділень компанії, а також
+                        найкращий курс обміну валют, який тільки може бути в
+                        Полтава.
+                      </li>
+                      <li class="pane__item">
+                        Перевіряємо купюри на справжність.
+                      </li>
+                      <li class="pane__item">
+                        Фіксація курсу проводиться за телефоном або в нашому
+                        додатку телеграм
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pane" id="businessmen">
+                  <div class="card-header">
+                    <a
+                      class="collapse-link collapse-link--inactive"
+                      href="#collapse-2"
+                    >
+                      бізнесменам
+                      <svg class="collapse-link__icon" width="15" height="15">
+                        <use href="./images/icons/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="collapse" id="collapse-2">
+                    <ul class="pane__list">
+                      <li class="pane__item">
+                        Люди бізнесу в Полтава можуть розраховувати на вигідні
+                        умови з обміну валюти.
+                      </li>
+                      <li class="pane__item">
+                        На фіксацію курсу в будь-якому зручному для них режимі,
+                        а також можливість замовити заздалегідь визначену суму.
+                      </li>
+                      <li class="pane__item">
+                        Для постійних клієнтів створені спеціальні умови обміну.
+                      </li>
+                      <li class="pane__item">
+                        Високий рівень безпеки при обміні. Для Вас працює
+                        команда професіоналів.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div class="tabs__thumb">
+              <img
+                data-panes-image
+                class="tabs__image"
+                src="./images/citizens.jpg"
+                width="420"
+                loading="lazy"
+                alt="Щасливий чоловік з доларами в руках"
+              />
             </div>
           </div>
 
@@ -326,22 +356,42 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="feature-card feature-card--accent">
+                <div
+                  class="feature-card feature-card--accent swiper-slide__feature-card"
+                >
                   <h3 class="feature-card__title">оптовий курс</h3>
                   <img
                     class="feature-card__image"
+                    srcset="
+                      ./images/calculator-320.png   320w,
+                      ./images/calculator-640.png   640w,
+                      ./images/calculator-960.png   960w,
+                      ./images/calculator-1280.png 1280w,
+                      ./images/calculator-1920.png 1920w
+                    "
+                    sizes="(min-width: 1024px) 10vw, (min-width: 450px) 110px, 35vw"
                     src="./images/calculator.png"
                     alt="Калькулятор"
                   />
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="feature-card feature-card--dark">
+                <div
+                  class="feature-card feature-card--dark swiper-slide__feature-card"
+                >
                   <h3 class="feature-card__title">
                     індивідуальний підхід до кожного клієнта
                   </h3>
                   <img
                     class="feature-card__image"
+                    srcset="
+                      ./images/staff-320.png   320w,
+                      ./images/staff-640.png   640w,
+                      ./images/staff-960.png   960w,
+                      ./images/staff-1280.png 1280w,
+                      ./images/staff-1920.png 1920w
+                    "
+                    sizes="(min-width: 1024px) 10vw, 90px"
                     src="./images/staff.png"
                     alt="Персонал"
                   />
@@ -349,11 +399,19 @@
               </div>
               <div class="swiper-slide">
                 <div
-                  class="feature-card feature-card--accent feature-card--accent-reversed"
+                  class="feature-card feature-card--accent feature-card--accent-reversed swiper-slide__feature-card"
                 >
                   <h3 class="feature-card__title">оптові знижки</h3>
                   <img
                     class="feature-card__image"
+                    srcset="
+                      ./images/contract-320.png   320w,
+                      ./images/contract-640.png   640w,
+                      ./images/contract-960.png   960w,
+                      ./images/contract-1280.png 1280w,
+                      ./images/contract-1920.png 1920w
+                    "
+                    sizes="(min-width: 1024px) 10vw, (min-width: 450px) 120px, 35vw"
                     src="./images/contract.png"
                     alt="Договір с печаткою та ручкою"
                   />
@@ -361,34 +419,60 @@
               </div>
             </div>
 
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
 
           <!-- features card list -->
           <ul class="features-list">
-            <li class="feature-card">
+            <li class="feature-card feature-card--accent">
               <h3 class="feature-card__title">оптовий курс</h3>
               <img
                 class="feature-card__image"
+                srcset="
+                  ./images/calculator-320.png   320w,
+                  ./images/calculator-640.png   640w,
+                  ./images/calculator-960.png   960w,
+                  ./images/calculator-1280.png 1280w,
+                  ./images/calculator-1920.png 1920w
+                "
+                sizes="(min-width: 768px) 10vw, 40vw"
                 src="./images/calculator.png"
+                loading="lazy"
                 alt="Калькулятор"
               />
             </li>
-            <li class="feature-card">
+            <li class="feature-card feature-card--dark">
               <h3 class="feature-card__title">
                 індивідуальний підхід до кожного клієнта
               </h3>
               <img
                 class="feature-card__image"
+                srcset="
+                  ./images/staff-320.png   320w,
+                  ./images/staff-640.png   640w,
+                  ./images/staff-960.png   960w,
+                  ./images/staff-1280.png 1280w,
+                  ./images/staff-1920.png 1920w
+                "
+                sizes="(min-width: 768px) 8vw, 25vw"
                 src="./images/staff.png"
                 alt="Персонал"
               />
             </li>
-            <li class="feature-card">
+            <li
+              class="feature-card feature-card--accent feature-card--accent-reversed"
+            >
               <h3 class="feature-card__title">оптові знижки</h3>
               <img
                 class="feature-card__image"
+                srcset="
+                  ./images/contract-320.png   320w,
+                  ./images/contract-640.png   640w,
+                  ./images/contract-960.png   960w,
+                  ./images/contract-1280.png 1280w,
+                  ./images/contract-1920.png 1920w
+                "
+                sizes="(min-width: 768px) 10vw, 35vw"
                 src="./images/contract.png"
                 alt="Договір с печаткою та ручкою"
               />
@@ -398,31 +482,39 @@
       </section>
 
       <!--! COMPANY PHOTO -->
-      <section class="company-photo">
+      <section class="company-photo" id="company-photo">
         <div class="container">
-          <h2>Фото обмінника валют</h2>
-          <img src="./images/company.jpg" alt="Фото обмінника валют" />
+          <h2 class="visually-hidden">Фото обмінника валют</h2>
+          <div class="company-photo__thumb">
+            <img
+              class="company-photo__image"
+              srcset="./images/company.jpg 1x, ./images/company@2x.jpg 2x"
+              loading="lazy"
+              src="./images/company.jpg"
+              alt="Фото обмінника валют"
+            />
+          </div>
         </div>
       </section>
 
       <!--! MAP -->
-      <section class="map">
+      <section class="map" id="map">
         <div class="container">
           <!-- location info card -->
           <div class="location-card map__location-card">
             <h4 class="location-card__title">де ми знаходимося</h4>
-            <address class="location-card__address">
-              <svg class="location-card__icon" width="30" height="30">
+            <address class="address">
+              <svg class="address__icon" width="30" height="30">
                 <use href="./images/icons/sprite.svg#icon-gps"></use>
               </svg>
               <a
-                class="location-card__address-link"
+                class="address__link"
                 href="https://goo.gl/maps/9jP3N2YQb4FQij3H7"
                 target="_blank"
               >
                 м. Полтава, вул. Соборності, 43
                 <br />
-                <span class="location-card__secondary-text">
+                <span class="address__secondary-text">
                   (біля рест. Панорама)
                 </span>
               </a>
@@ -446,50 +538,194 @@
     </main>
 
     <!--! FOOTER -->
-    <footer class="page-footer">
-      <div class="container">
-        <!-- logo -->
-        <a href="./" class="logo">
-          <img
-            class="logo__image"
-            src="./images/icons/logo.svg"
-            alt="Логотип компанії"
-          />
-          <div class="logo__text">
-            <span class="logo__label">ОБМІН ВАЛЮТ</span>
-            <span class="logo__city">м. Полтава</span>
+    <footer class="page-footer page-footer--small">
+      <div class="container page-footer__row">
+        <div class="page-footer__column">
+          <div class="page-footer__logo-wrapper">
+            <!-- logo -->
+            <a href="./" class="logo page-footer__logo">
+              <img
+                class="logo__image"
+                src="./images/icons/logo.svg"
+                alt="Логотип компанії"
+              />
+              <div class="logo__text">
+                <span class="logo__label">ОБМІН ВАЛЮТ</span>
+                <span class="logo__city">м. Полтава</span>
+              </div>
+            </a>
+            <!-- copyright -->
+            <p class="copyright copyright--under-logo">
+              &copy; 2023 Обмін валют м.Полтава
+            </p>
           </div>
-        </a>
 
-        <a href="">Політика конфіденсійності</a>
+          <!-- site nav -->
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#hero">Курси</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#advertisment">Стежити</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#advantages">Переваги</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#company-photo">Фото</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#map">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__column">
+          <!-- subscribe button -->
+          <a
+            href="https://t.me/currencyexchangePoltava"
+            target="_blank"
+            class="button page-footer__button"
+          >
+            підписатися
+            <svg class="button__icon" width="25" height="25">
+              <use href="./images/icons/sprite.svg#icon-telegram"></use>
+            </svg>
+          </a>
+
+          <div>
+            <!-- call us -->
+            <a
+              class="company-phone page-footer__company-phone"
+              href="tel:+380735098779"
+            >
+              <svg class="company-phone__icon" width="33" height="33">
+                <use href="./images/icons/sprite.svg#icon-phone"></use>
+              </svg>
+              +38 (073) 509-87-79
+            </a>
+
+            <!-- schedule -->
+            <p class="schedule page-footer__schedule">
+              <b>Пн-нд</b> с 9.00 до 18.00
+            </p>
+          </div>
+
+          <!-- company address -->
+          <address class="address page-footer__address">
+            <svg class="address__icon" width="30" height="30">
+              <use href="./images/icons/sprite.svg#icon-gps"></use>
+            </svg>
+            <a
+              class="address__link"
+              href="https://goo.gl/maps/9jP3N2YQb4FQij3H7"
+              target="_blank"
+            >
+              м. Полтава, вул. Соборності, 43
+              <br />
+              <span class="address__secondary-text">
+                (біля рест. Панорама)
+              </span>
+            </a>
+          </address>
+        </div>
+
+        <p class="copyright copyright--temporary">
+          &copy; 2023 Обмін валют м.Полтава
+        </p>
+      </div>
+    </footer>
+
+    <footer class="page-footer page-footer--large">
+      <div class="container page-footer__row">
+        <div class="page-footer__logo-wrapper">
+          <!-- logo -->
+          <a href="./" class="logo page-footer__logo">
+            <img
+              class="logo__image"
+              src="./images/icons/logo.svg"
+              alt="Логотип компанії"
+            />
+            <div class="logo__text">
+              <span class="logo__label">ОБМІН ВАЛЮТ</span>
+              <span class="logo__city">м. Полтава</span>
+            </div>
+          </a>
+          <!-- copyright -->
+          <p class="copyright copyright--under-logo">
+            &copy; 2023 Обмін валют м.Полтава
+          </p>
+        </div>
 
         <!-- site nav -->
-        <ul>
-          <li><a href="">курси</a></li>
-          <li><a href="">стежити</a></li>
-          <li><a href="">переваги</a></li>
-          <li><a href="">фото</a></li>
-          <li><a href="">контакти</a></li>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#hero">Курси</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#advertisment">Стежити</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#advantages">Переваги</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#company-photo">Фото</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#map">Контакти</a>
+          </li>
         </ul>
 
         <!-- subscribe button -->
-        <button class="button">
+        <a
+          href="https://t.me/currencyexchangePoltava"
+          target="_blank"
+          class="button page-footer__button"
+        >
           підписатися
           <svg class="button__icon" width="25" height="25">
             <use href="./images/icons/sprite.svg#icon-telegram"></use>
           </svg>
-        </button>
-
-        <!-- call us -->
-        <a class="company-phone" href="tel:+380735098779">
-          <svg class="company-phone__icon" width="33" height="33">
-            <use href="./images/icons/sprite.svg#icon-phone"></use>
-          </svg>
-          +38 (073) 509-87-79
         </a>
 
-        <!-- schedule -->
-        <p>Пн-нд с 9.00 до 18.00</p>
+        <div class="page-footer__contact-info">
+          <!-- call us -->
+          <a
+            class="company-phone page-footer__company-phone"
+            href="tel:+380735098779"
+          >
+            <svg class="company-phone__icon" width="33" height="33">
+              <use href="./images/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            +38 (073) 509-87-79
+          </a>
+          <!-- schedule -->
+          <p class="schedule page-footer__schedule">
+            <b>Пн-нд</b> с 9.00 до 18.00
+          </p>
+
+          <!-- company address -->
+          <address class="address page-footer__address">
+            <svg class="address__icon" width="30" height="30">
+              <use href="./images/icons/sprite.svg#icon-gps"></use>
+            </svg>
+            <a
+              class="address__link"
+              href="https://goo.gl/maps/9jP3N2YQb4FQij3H7"
+              target="_blank"
+            >
+              м. Полтава, вул. Соборності, 43
+              <br />
+              <span class="address__secondary-text">
+                (біля рест. Панорама)
+              </span>
+            </a>
+          </address>
+        </div>
+
+        <p class="copyright copyright--temporary">
+          &copy; 2023 Обмін валют м.Полтава
+        </p>
       </div>
     </footer>
 
@@ -533,12 +769,17 @@
 
       <div class="contacts mobile-menu__contacts">
         <!-- subscribe button -->
-        <button class="button" type="button">
+        <a
+          href="https://t.me/currencyexchangePoltava"
+          target="_blank"
+          class="button"
+          type="button"
+        >
           підписатися
           <svg class="button__icon" width="25" height="25">
             <use href="./images/icons/sprite.svg#icon-telegram"></use>
           </svg>
-        </button>
+        </a>
 
         <!-- call us -->
         <a class="company-phone" href="tel:+380735098779">

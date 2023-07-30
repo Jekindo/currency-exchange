@@ -40,9 +40,24 @@
     width: 100%;
   }
 
-  @include for-size(mobile) {
+  @include for-size(tablet) {
+    font-size: 14px;
+  }
+
+  @include for-size(desktop) {
     font-size: 18px;
   }
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 40px;
+  height: 100%;
+  background-color: rgba(255, 237, 188, 0.5);
+  animation: button 4000ms ease-in-out 750ms infinite;
 }
 
 .button__icon {

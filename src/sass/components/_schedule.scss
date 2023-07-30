@@ -1,0 +1,35 @@
+.schedule {
+  @include font(400, 16px, 1.4);
+
+  position: relative;
+
+  display: inline-block;
+  padding-left: 20px;
+  
+  color: #fff;
+
+  @include for-size(mobile-only) {
+    margin-bottom: 30px;
+  }
+
+  &::before {
+    @include color-pulse(getColor('online-dark'), getColor('online'));
+
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: getColor('online');
+
+    animation: color-pulse 1000ms 750ms infinite alternate,
+      pulse 1000ms 750ms infinite alternate;
+  }
+}

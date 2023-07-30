@@ -1,0 +1,24 @@
+.excerpt {
+	&--accent {
+		color: getColor('accent');
+	}
+
+	&--secondary-accent {
+		color: getColor('secondary-accent');
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	// &__link {
+	// 	text-decoration: underline;
+	// 	color: inherit;
+
+	// 	transition: color $transition-duration $ttf;
+
+	// 	&:hover {
+	// 		color: getColor('secondary-accent');
+	// 	}
+	// }
+}
