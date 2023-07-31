@@ -7,36 +7,30 @@
       url('../images/clouds-bottom-mobile.png') 1x,
       url('../images/clouds-bottom-mobile@2x.png') 2x
     ),
-    linear-gradient(90deg, #351812 0%, rgba(0, 0, 0, 0) 18.99%),
-    linear-gradient(270deg, #351812 0%, rgba(0, 0, 0, 0) 17.36%),
+    image-set(
+      url('../images/start-sparks.png') 1x,
+      url('../images/start-sparks@2x.png') 2x
+    ),
+    image-set(
+      url('../images/end-sparks.png') 1x,
+      url('../images/end-sparks@2x.png') 2x
+    ),
+    linear-gradient(90deg, #38150e 0%, rgba(0, 0, 0, 0) 18.99%),
+    linear-gradient(270deg, #38150e 0%, rgba(0, 0, 0, 0) 17.36%),
     linear-gradient(0deg, rgba(32, 9, 9, 0.78), rgba(32, 9, 9, 0.78)),
     image-set(
       url('../images/hero-bg.jpg') 1x,
       url('../images/hero-bg@2x.jpg') 2x
     );
+
   background-repeat: no-repeat;
-  background-position: bottom -1% center, center, center, center, top;
-  background-size: 100% auto, cover, cover, cover, cover;
+  background-position: bottom -1% center, bottom left, top right, center, center,
+    center, top;
+  background-size: 100% auto, 15% auto, 15% auto, cover, cover, cover, cover;
 
   @include for-size(tablet) {
     padding-top: 180px;
     padding-bottom: 200px;
-
-    background-image: image-set(
-        url('../images/clouds-bottom-desktop.png') 1x,
-        url('../images/clouds-bottom-desktop@2x.png') 2x
-      ),
-      linear-gradient(90deg, #38150e 0%, rgba(0, 0, 0, 0) 18.99%),
-      linear-gradient(270deg, #38150e 0%, rgba(0, 0, 0, 0) 17.36%),
-      linear-gradient(0deg, rgba(32, 9, 9, 0.78), rgba(32, 9, 9, 0.78)),
-      image-set(
-        url('../images/hero-bg.jpg') 1x,
-        url('../images/hero-bg@2x.jpg') 2x
-      );
-  }
-
-  @include for-size(desktop) {
-    padding-bottom: 250px;
 
     background-image: image-set(
         url('../images/clouds-bottom-desktop.png') 1x,
@@ -59,16 +53,12 @@
       );
   }
 
-  background-position: bottom -1% center, bottom left, top right, center, center,
-    center, top;
-  background-size: 100% auto, 15% auto, 15% auto, cover, cover, cover, cover;
+  @include for-size(desktop) {
+    padding-bottom: 250px;
+  }
 }
 
 //! black gradient-BG:
 // linear-gradient(90deg, #151515 0%, rgba(0, 0, 0, 0) 18.99%),
 // linear-gradient(270deg, #151515 0%, rgba(0, 0, 0, 0) 17.36%),
 // linear-gradient(0deg, rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.8))
-
-a {
-  scroll-behavior: smooth;
-}

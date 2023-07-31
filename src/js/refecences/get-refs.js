@@ -11,5 +11,7 @@ export default function getRefs() {
     backToTopButton: document.querySelector(
       'button[data-action="back-top-top"]'
     ),
+
+    lazyImages: document.querySelectorAll('.lazy-image')
   };
 }

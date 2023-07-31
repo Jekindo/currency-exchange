@@ -1,5 +1,6 @@
 import getRefs from './js/refecences/get-refs';
 
+import './js/lazy-images'
 import './js/collapse'
 import './js/tabs'
 import './js/vendors/swiper'
