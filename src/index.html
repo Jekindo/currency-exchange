@@ -53,12 +53,12 @@
             </li>
           </ul>
 
-          <div class="contacts">
+          <div class="contacts page-header__contacts">
             <!-- subscribe button -->
             <a
               href="https://t.me/currencyexchangePoltava"
               target="_blank"
-              class="button"
+              class="button contacts__button"
               type="button"
             >
               підписатися
@@ -121,42 +121,37 @@
           <p>* курси валют можуть змінюватись на протязі дня</p>
 
           <!-- currencies rate table -->
-          <table class="currencies-table">
-            <thead class="currencies-table__head">
-              <tr>
-                <th class="currencies-table__header">Валюта</th>
-                <th class="currencies-table__header">Купівля</th>
-                <th class="currencies-table__header">Продаж</th>
-                <th class="currencies-table__header">10 липня | 10:23</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="currencies-table__row currencies-table__block">
-                <td class="currencies-table__currency-name">
-                  <span class="excerpt excerpt--accent">Курс USD/UAH</span>
-                </td>
-                <td class="currencies-table__currency-rate">37.00</td>
-                <td class="currencies-table__currency-rate">37.50</td>
-                <td></td>
-              </tr>
-              <tr class="currencies-table__row currencies-table__block">
-                <td class="currencies-table__currency-name">
-                  <span class="excerpt excerpt--accent">Курс EUR/UAH</span>
-                </td>
-                <td class="currencies-table__currency-rate">40.80</td>
-                <td class="currencies-table__currency-rate">41.00</td>
-                <td></td>
-              </tr>
-              <tr class="currencies-table__row currencies-table__block">
-                <td class="currencies-table__currency-name">
-                  <span class="excerpt excerpt--accent">Курс PLN/UAH</span>
-                </td>
-                <td class="currencies-table__currency-rate">8.85</td>
-                <td class="currencies-table__currency-rate">9.10</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+          <ul class="currencies">
+            <li class="currencies__head">
+              <p class="currencies__head-text currencies__head-name">Валюта</p>
+              <p class="currencies__head-text currencies__head-buy">Купівля</p>
+              <p class="currencies__head-text currencies__head-sale">Продаж</p>
+              <p class="currencies__head-text currencies__head-time">
+                10 липня | 10:23
+              </p>
+            </li>
+            <li class="currencies__block">
+              <p class="currencies__block-name excerpt excerpt--accent">
+                Курс USD/UAH
+              </p>
+              <p class="currencies__block-buy">37.00</p>
+              <p class="currencies__block-sale">37.50</p>
+            </li>
+            <li class="currencies__block">
+              <p class="currencies__block-name excerpt excerpt--accent">
+                Курс EUR/UAH
+              </p>
+              <p class="currencies__block-buy">40.8</p>
+              <p class="currencies__block-sale">41.00</p>
+            </li>
+            <li class="currencies__block">
+              <p class="currencies__block-name excerpt excerpt--accent">
+                Курс PLN/UAH
+              </p>
+              <p class="currencies__block-buy">8.85</p>
+              <p class="currencies__block-sale">9.10</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -210,7 +205,10 @@
             і працює з такими видами: <br />
             <span class="excerpt excerpt--secondary-accent">USA - долар</span>,
             <span class="excerpt excerpt--secondary-accent">EUR - Євро</span>,
-            <span class="excerpt excerpt--secondary-accent">PL - Польська злота</span> .
+            <span class="excerpt excerpt--secondary-accent"
+              >PL - Польська злота</span
+            >
+            .
           </p>
 
           <!-- tabs -->
@@ -773,7 +771,7 @@
         <a
           href="https://t.me/currencyexchangePoltava"
           target="_blank"
-          class="button"
+          class="button contacts__button"
           type="button"
         >
           підписатися

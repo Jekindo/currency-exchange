@@ -1,20 +1,17 @@
 .contacts {
-  @include aligned-flex();
-
-  flex-direction: column;
-  row-gap: 20px;
-
-  @include for-size(mobile-only) {
-    display: none;
-  }
-
   @include for-size(tablet-only) {
     position: absolute;
     top: 15px;
     left: 0;
     width: 100%;
+
+    display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     column-gap: 100px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
   }
 }

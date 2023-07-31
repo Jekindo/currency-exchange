@@ -1,0 +1,116 @@
+.currencies {
+  @extend %list;
+}
+
+.currencies__head {
+  @include font(600, 14px, 1.5);
+
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 3px solid getColor('transparency-accent');
+
+  @include for-size(460px) {
+    font-size: 16px;
+  }
+
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 24px;
+  }
+}
+
+.currencies__head-text {
+  margin-bottom: 0;
+  padding-left: 10px;
+  flex-basis: 33.3%;
+
+  @include for-size(tablet) {
+    padding-left: 20px;
+    flex-basis: 25%;
+  }
+}
+
+.currencies__head-name {
+  @include for-size(mobile-only) {
+    display: none;
+  }
+}
+
+.currencies__head-time {
+  @include for-size(tablet) {
+    text-align: right;
+  }
+}
+
+.currencies__block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  border-bottom: 3px solid rgba(255, 153, 0, 0.5);
+
+  @include for-size(tablet) {
+    padding: 30px 0;
+  }
+}
+
+.currencies__block-name {
+  @include font(700, 16px, 1);
+
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+  @include for-size(mobile-only) {
+    flex-basis: 100%;
+  }
+
+  @include for-size(400px) {
+    font-size: 22px;
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: 0;
+    flex-basis: 25%;
+  }
+
+  @include for-size(laptop) {
+    font-size: 26px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 36px;
+  }
+}
+
+.currencies__block-buy,
+.currencies__block-sale {
+  @include font(700, 26px, 1);
+
+  margin-bottom: 0;
+  padding-left: 10px;
+
+  @include for-size(mobile-only) {
+    flex-basis: 33%;
+  }
+
+  @include for-size(400px) {
+    font-size: 32px;
+  }
+
+  @include for-size(tablet) {
+    flex-basis: 25%;
+    padding-left: 20px;
+  }
+
+  @include for-size(laptop) {
+    font-size: 38px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 52px;
+  }
+}

@@ -7,5 +7,9 @@
   transition: background-color getTransition('duration')
     getTransition('timing-function');
 
- 
+  &__contacts {
+    @include for-size(mobile-only) {
+      display: none;
+    }
+  }
 }
