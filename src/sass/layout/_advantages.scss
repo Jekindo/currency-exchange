@@ -17,7 +17,7 @@
 
   background-size: 100% auto, 100% auto, 40% auto;
   background-repeat: no-repeat;
-  background-position: top -1.5vw, bottom -1%, right bottom;
+  background-position: top, bottom, right bottom;
 
   @include for-size(tablet) {
     background-image: image-set(
