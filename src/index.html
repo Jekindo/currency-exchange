@@ -187,13 +187,32 @@
           </div>
 
           <!-- subscribe image -->
-          <img
-            class="subscribe__image"
-            srcset="./images/subscribe.png 1x, ./images/subscribe@2x.png 2x"
-            src="./images/subscribe.png"
-            alt="Таблиця з курсом валюти"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/subscribe.png?as=avif    1x,
+                ./images/subscribe@2x.png?as=avif 2x
+              "
+              type="image/avif"
+            />
+            <source
+              srcset="
+                ./images/subscribe.png?as=webp    1x,
+                ./images/subscribe@2x.png?as=webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="./images/subscribe.png 1x, ./images/subscribe@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              class="subscribe__image"
+              src="./images/subscribe.png"
+              alt="Таблиця з курсом валюти"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </section>
 
@@ -347,15 +366,92 @@
             </div>
 
             <div class="tabs__thumb">
-              <img
-                data-panes-image
-                class="tabs__image"
-                srcset="./images/citizens.jpg 1x, ./images/citizens@2x.jpg 2x"
-                src="./images/citizens.jpg"
-                width="420"
-                loading="lazy"
-                alt="Щасливий чоловік з доларами в руках"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/citizens.jpg?as=avif    1x,
+                    ./images/citizens@2x.jpg?as=avif 2x
+                  "
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/citizens.jpg?as=webp    1x,
+                    ./images/citizens@2x.jpg?as=webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/citizens.jpg 1x, ./images/citizens@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  id="citizens"
+                  class="tabs__image tabs__image--show"
+                  src="./images/citizens.jpg"
+                  alt="Щасливий чоловік з доларами в руках"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture>
+                <source
+                  srcset="
+                    ./images/guests.jpg?as=avif    1x,
+                    ./images/guests@2x.jpg?as=avif 2x
+                  "
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/guests.jpg?as=webp    1x,
+                    ./images/guests@2x.jpg?as=webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/guests.jpg 1x, ./images/guests@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  id="guests"
+                  class="tabs__image"
+                  src="./images/guests.jpg"
+                  alt="Щаслива жінка з доларами в руках"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture>
+                <source
+                  srcset="
+                    ./images/businessmen.jpg?as=avif    1x,
+                    ./images/businessmen@2x.jpg?as=avif 2x
+                  "
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/businessmen.jpg?as=webp    1x,
+                    ./images/businessmen@2x.jpg?as=webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/businessmen.jpg    1x,
+                    ./images/businessmen@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  id="businessmen"
+                  class="tabs__image"
+                  src="./images/businessmen.jpg"
+                  alt="Щасливий чоловік з доларами в руках"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
 
@@ -369,19 +465,46 @@
                   class="feature-card feature-card--accent swiper-slide__feature-card"
                 >
                   <h3 class="feature-card__title">оптовий курс</h3>
-                  <img
-                    class="feature-card__image"
-                    srcset="
-                      ./images/calculator-320.png   320w,
-                      ./images/calculator-640.png   640w,
-                      ./images/calculator-960.png   960w,
-                      ./images/calculator-1280.png 1280w,
-                      ./images/calculator-1920.png 1920w
-                    "
-                    sizes="(min-width: 1024px) 10vw, (min-width: 450px) 110px, 35vw"
-                    src="./images/calculator.png"
-                    alt="Калькулятор"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/calculator-320.png?as=avif   320w,
+                        ./images/calculator-640.png?as=avif   640w,
+                        ./images/calculator-960.png?as=avif   960w,
+                        ./images/calculator-1280.png?as=avif 1280w,
+                        ./images/calculator-1920.png?as=avif 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 35vw"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="
+                        ./images/calculator-320.png?as=webp   320w,
+                        ./images/calculator-640.png?as=webp   640w,
+                        ./images/calculator-960.png?as=webp   960w,
+                        ./images/calculator-1280.png?as=webp 1280w,
+                        ./images/calculator-1920.png?as=webp 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 35vw"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/calculator-320.png   320w,
+                        ./images/calculator-640.png   640w,
+                        ./images/calculator-960.png   960w,
+                        ./images/calculator-1280.png 1280w,
+                        ./images/calculator-1920.png 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 35vw"
+                      type="image/png"
+                    />
+                    <img
+                      class="feature-card__image"
+                      src="./images/calculator.png"
+                      alt="Калькулятор"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -391,19 +514,46 @@
                   <h3 class="feature-card__title">
                     індивідуальний підхід до кожного клієнта
                   </h3>
-                  <img
-                    class="feature-card__image"
-                    srcset="
-                      ./images/staff-320.png   320w,
-                      ./images/staff-640.png   640w,
-                      ./images/staff-960.png   960w,
-                      ./images/staff-1280.png 1280w,
-                      ./images/staff-1920.png 1920w
-                    "
-                    sizes="(min-width: 1024px) 10vw, 90px"
-                    src="./images/staff.png"
-                    alt="Персонал"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/staff-320.png?as=avif   320w,
+                        ./images/staff-640.png?as=avif   640w,
+                        ./images/staff-960.png?as=avif   960w,
+                        ./images/staff-1280.png?as=avif 1280w,
+                        ./images/staff-1920.png?as=avif 1920w
+                      "
+                      sizes="(min-width: 450px) 92px, 21vw"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="
+                        ./images/staff-320.png?as=webp   320w,
+                        ./images/staff-640.png?as=webp   640w,
+                        ./images/staff-960.png?as=webp   960w,
+                        ./images/staff-1280.png?as=webp 1280w,
+                        ./images/staff-1920.png?as=webp 1920w
+                      "
+                      sizes="(min-width: 450px) 92px, 21vw"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/staff-320.png   320w,
+                        ./images/staff-640.png   640w,
+                        ./images/staff-960.png   960w,
+                        ./images/staff-1280.png 1280w,
+                        ./images/staff-1920.png 1920w
+                      "
+                      sizes="(min-width: 450px) 92px, 21vw"
+                      type="image/png"
+                    />
+                    <img
+                      class="feature-card__image"
+                      src="./images/staff.png"
+                      alt="staff"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -411,19 +561,46 @@
                   class="feature-card feature-card--accent feature-card--accent-reversed swiper-slide__feature-card"
                 >
                   <h3 class="feature-card__title">оптові знижки</h3>
-                  <img
-                    class="feature-card__image"
-                    srcset="
-                      ./images/contract-320.png   320w,
-                      ./images/contract-640.png   640w,
-                      ./images/contract-960.png   960w,
-                      ./images/contract-1280.png 1280w,
-                      ./images/contract-1920.png 1920w
-                    "
-                    sizes="(min-width: 1024px) 10vw, (min-width: 450px) 120px, 35vw"
-                    src="./images/contract.png"
-                    alt="Договір с печаткою та ручкою"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/contract-320.png?as=avif   320w,
+                        ./images/contract-640.png?as=avif   640w,
+                        ./images/contract-960.png?as=avif   960w,
+                        ./images/contract-1280.png?as=avif 1280w,
+                        ./images/contract-1920.png?as=avif 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 30vw"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="
+                        ./images/contract-320.png?as=webp   320w,
+                        ./images/contract-640.png?as=webp   640w,
+                        ./images/contract-960.png?as=webp   960w,
+                        ./images/contract-1280.png?as=webp 1280w,
+                        ./images/contract-1920.png?as=webp 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 30vw"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/contract-320.png   320w,
+                        ./images/contract-640.png   640w,
+                        ./images/contract-960.png   960w,
+                        ./images/contract-1280.png 1280w,
+                        ./images/contract-1920.png 1920w
+                      "
+                      sizes="(min-width: 450px) 110px, 30vw"
+                      type="image/png"
+                    />
+                    <img
+                      class="feature-card__image"
+                      src="./images/contract.png"
+                      alt="Договір с печаткою та ручкою"
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -435,55 +612,136 @@
           <ul class="features-list">
             <li class="feature-card feature-card--accent">
               <h3 class="feature-card__title">оптовий курс</h3>
-              <img
-                class="feature-card__image"
-                srcset="
-                  ./images/calculator-320.png   320w,
-                  ./images/calculator-640.png   640w,
-                  ./images/calculator-960.png   960w,
-                  ./images/calculator-1280.png 1280w,
-                  ./images/calculator-1920.png 1920w
-                "
-                sizes="(min-width: 768px) 10vw, 40vw"
-                src="./images/calculator.png"
-                alt="Калькулятор"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/calculator-320.png?as=avif   320w,
+                    ./images/calculator-640.png?as=avif   640w,
+                    ./images/calculator-960.png?as=avif   960w,
+                    ./images/calculator-1280.png?as=avif 1280w,
+                    ./images/calculator-1920.png?as=avif 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 40vw"
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/calculator-320.png?as=webp   320w,
+                    ./images/calculator-640.png?as=webp   640w,
+                    ./images/calculator-960.png?as=webp   960w,
+                    ./images/calculator-1280.png?as=webp 1280w,
+                    ./images/calculator-1920.png?as=webp 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 40vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/calculator-320.png   320w,
+                    ./images/calculator-640.png   640w,
+                    ./images/calculator-960.png   960w,
+                    ./images/calculator-1280.png 1280w,
+                    ./images/calculator-1920.png 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 40vw"
+                  type="image/png"
+                />
+                <img
+                  class="feature-card__image"
+                  src="./images/calculator.png"
+                  alt="Калькулятор"
+                />
+              </picture>
             </li>
             <li class="feature-card feature-card--dark">
               <h3 class="feature-card__title">
                 індивідуальний підхід до кожного клієнта
               </h3>
-              <img
-                class="feature-card__image"
-                srcset="
-                  ./images/staff-320.png   320w,
-                  ./images/staff-640.png   640w,
-                  ./images/staff-960.png   960w,
-                  ./images/staff-1280.png 1280w,
-                  ./images/staff-1920.png 1920w
-                "
-                sizes="(min-width: 768px) 8vw, 25vw"
-                src="./images/staff.png"
-                alt="Персонал"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/staff-320.png?as=avif   320w,
+                    ./images/staff-640.png?as=avif   640w,
+                    ./images/staff-960.png?as=avif   960w,
+                    ./images/staff-1280.png?as=avif 1280w,
+                    ./images/staff-1920.png?as=avif 1920w
+                  "
+                  sizes="(min-width: 768px) 8vw, 25vw"
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/staff-320.png?as=webp   320w,
+                    ./images/staff-640.png?as=webp   640w,
+                    ./images/staff-960.png?as=webp   960w,
+                    ./images/staff-1280.png?as=webp 1280w,
+                    ./images/staff-1920.png?as=webp 1920w
+                  "
+                  sizes="(min-width: 768px) 8vw, 25vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/staff-320.png   320w,
+                    ./images/staff-640.png   640w,
+                    ./images/staff-960.png   960w,
+                    ./images/staff-1280.png 1280w,
+                    ./images/staff-1920.png 1920w
+                  "
+                  sizes="(min-width: 768px) 8vw, 25vw"
+                  type="image/png"
+                />
+                <img
+                  class="feature-card__image"
+                  src="./images/staff.png"
+                  alt="Персонал"
+                />
+              </picture>
             </li>
             <li
               class="feature-card feature-card--accent feature-card--accent-reversed"
             >
               <h3 class="feature-card__title">оптові знижки</h3>
-              <img
-                class="feature-card__image"
-                srcset="
-                  ./images/contract-320.png   320w,
-                  ./images/contract-640.png   640w,
-                  ./images/contract-960.png   960w,
-                  ./images/contract-1280.png 1280w,
-                  ./images/contract-1920.png 1920w
-                "
-                sizes="(min-width: 768px) 10vw, 35vw"
-                src="./images/contract.png"
-                alt="Договір с печаткою та ручкою"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/contract-320.png?as=avif   320w,
+                    ./images/contract-640.png?as=avif   640w,
+                    ./images/contract-960.png?as=avif   960w,
+                    ./images/contract-1280.png?as=avif 1280w,
+                    ./images/contract-1920.png?as=avif 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 35vw"
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./images/contract-320.png?as=webp   320w,
+                    ./images/contract-640.png?as=webp   640w,
+                    ./images/contract-960.png?as=webp   960w,
+                    ./images/contract-1280.png?as=webp 1280w,
+                    ./images/contract-1920.png?as=webp 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 35vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/contract-320.png   320w,
+                    ./images/contract-640.png   640w,
+                    ./images/contract-960.png   960w,
+                    ./images/contract-1280.png 1280w,
+                    ./images/contract-1920.png 1920w
+                  "
+                  sizes="(min-width: 768px) 10vw, 35vw"
+                  type="image/png"
+                />
+                <img
+                  class="feature-card__image"
+                  src="./images/contract.png"
+                  alt="Договір с печаткою та ручкою"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -494,13 +752,32 @@
         <div class="container">
           <h2 class="visually-hidden">Фото обмінника валют</h2>
           <div class="company-photo__thumb">
-            <img
-              class="company-photo__image"
-              srcset="./images/company.jpg 1x, ./images/company@2x.jpg 2x"
-              loading="lazy"
-              src="./images/company.jpg"
-              alt="Фото обмінника валют"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/company.jpg?as=avif    1x,
+                  ./images/company@2x.jpg?as=avif 2x
+                "
+                type="image/avif"
+              />
+              <source
+                srcset="
+                  ./images/company.jpg?as=webp    1x,
+                  ./images/company@2x.jpg?as=webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="./images/company.jpg 1x, ./images/company@2x.jpg 2x"
+                type="image/jpeg"
+              />
+              <img
+                class="company-photo__image"
+                src="./images/company.jpg"
+                alt="Фото обмінника валют"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
       </section>
