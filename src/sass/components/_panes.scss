@@ -47,16 +47,19 @@
     margin-bottom: 35px;
   }
 
-  &:nth-child(1)::before {
+  &--time::before {
     background-image: url('../images/icons/icon-time.svg');
   }
-  &:nth-child(2)::before {
+
+  &--shield::before {
     background-image: url('../images/icons/shield.svg');
   }
-  &:nth-child(3)::before {
+
+  &--phone::before {
     background-image: url('../images/icons/call-phone.svg');
   }
-  &:nth-child(4)::before {
+  
+  &--discount::before {
     background-image: url('../images/icons/discount.svg');
   }
 
