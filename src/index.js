@@ -1,4 +1,4 @@
-import './js/lazy-images';
+
 import './js/mobile-menu';
 import './js/collapse';
 import './js/tabs';
