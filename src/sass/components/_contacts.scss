@@ -13,6 +13,9 @@
   }
 
   &__button {
-    margin-bottom: 20px;
+    @media screen and (max-width: calc(getBreakpoint(tablet) - 1px)),
+      (min-width: getBreakpoint(laptop)) {
+      margin-bottom: 20px;
+    }
   }
 }
